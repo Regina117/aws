@@ -1,0 +1,20 @@
+# AWS Configuration
+ec2_access_key: "YOUR_AWS_ACCESS_KEY"  # Ключ доступа к AWS
+ec2_secret_key: "YOUR_AWS_SECRET_KEY"  # Секретный ключ доступа к AWS
+region: "ap-southeast-2"              # Регион, где будут размещены ресурсы AWS
+
+# EC2 Instance Configuration
+key_name: "my_aws"                    # Имя ключа SSH для доступа к экземпляру
+image: "ami-06cd706b6bacee637"        # ID образа AMI, используемого для создания экземпляра
+instance_type: "t2.nano"              # Тип экземпляра EC2
+sec_group: "test-security-group"      # Имя группы безопасности для EC2
+
+# Deployment Configuration
+git_repo_url: "https://github.com/geoserver/geoserver.git"  # URL репозитория GeoServer
+app_directory: "/app"                                       # Путь к директории приложения на сервере
+war_file_path: "/app/src/web/app/target/geoserver.war"      # Путь к итоговому WAR-файлу
+tomcat_war_dest: "/var/lib/tomcat9/webapps/geoserver.war"   # Путь для деплоя WAR-файла в Tomcat
+
+# Hosts
+build_host: "158.160.149.247"         # Хост для сборки GeoServer
+prod_host: "158.160.134.42"           # Хост для размещения GeoServer
